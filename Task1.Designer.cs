@@ -50,6 +50,7 @@ namespace GUI
             this.Controls.Add(this.back);
             this.Name = "Task1";
             this.Text = "Task1";
+            this.Load += new System.EventHandler(this.Task1_Load);
             this.ResumeLayout(false);
 
         }

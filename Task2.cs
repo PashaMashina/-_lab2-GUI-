@@ -30,5 +30,10 @@ namespace GUI
         {
             Application.Run(new Menu());
         }
+
+        private void Task2_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
