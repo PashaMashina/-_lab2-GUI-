@@ -128,7 +128,7 @@ namespace GUI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.back);
             this.Name = "Task1";
-            this.Text = "Task1";
+            this.Text = "Задание 2";
             this.Load += new System.EventHandler(this.Task1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

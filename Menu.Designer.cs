@@ -53,15 +53,15 @@ namespace GUI
             this.exp2.UseVisualStyleBackColor = true;
             this.exp2.Click += new System.EventHandler(this.exp2_Click);
             // 
-            // Form1
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 118);
             this.Controls.Add(this.exp2);
             this.Controls.Add(this.exp1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Menu";
+            this.Text = "Меню";
             this.ResumeLayout(false);
 
         }
