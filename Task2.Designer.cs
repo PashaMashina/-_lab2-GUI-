@@ -72,7 +72,7 @@ namespace GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 87);
+            this.label2.Location = new System.Drawing.Point(41, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(432, 15);
             this.label2.TabIndex = 3;
@@ -80,7 +80,7 @@ namespace GUI
             // 
             // inputBBox
             // 
-            this.inputBBox.Location = new System.Drawing.Point(94, 117);
+            this.inputBBox.Location = new System.Drawing.Point(122, 117);
             this.inputBBox.Name = "inputBBox";
             this.inputBBox.Size = new System.Drawing.Size(100, 23);
             this.inputBBox.TabIndex = 4;
@@ -88,7 +88,7 @@ namespace GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 120);
+            this.label3.Location = new System.Drawing.Point(78, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 15);
             this.label3.TabIndex = 5;
@@ -107,7 +107,7 @@ namespace GUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 191);
+            this.label5.Location = new System.Drawing.Point(59, 187);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(312, 15);
             this.label5.TabIndex = 8;
@@ -116,7 +116,7 @@ namespace GUI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(50, 226);
+            this.label6.Location = new System.Drawing.Point(78, 222);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 15);
             this.label6.TabIndex = 9;
@@ -124,14 +124,14 @@ namespace GUI
             // 
             // inputCBox
             // 
-            this.inputCBox.Location = new System.Drawing.Point(94, 223);
+            this.inputCBox.Location = new System.Drawing.Point(122, 219);
             this.inputCBox.Name = "inputCBox";
             this.inputCBox.Size = new System.Drawing.Size(100, 23);
             this.inputCBox.TabIndex = 11;
             // 
             // buttonTaskB
             // 
-            this.buttonTaskB.Location = new System.Drawing.Point(241, 117);
+            this.buttonTaskB.Location = new System.Drawing.Point(269, 117);
             this.buttonTaskB.Name = "buttonTaskB";
             this.buttonTaskB.Size = new System.Drawing.Size(149, 23);
             this.buttonTaskB.TabIndex = 13;
@@ -141,16 +141,17 @@ namespace GUI
             // 
             // buttonTaskC
             // 
-            this.buttonTaskC.Location = new System.Drawing.Point(241, 223);
+            this.buttonTaskC.Location = new System.Drawing.Point(269, 219);
             this.buttonTaskC.Name = "buttonTaskC";
             this.buttonTaskC.Size = new System.Drawing.Size(149, 23);
             this.buttonTaskC.TabIndex = 14;
             this.buttonTaskC.Text = "Расчитать";
             this.buttonTaskC.UseVisualStyleBackColor = true;
+            this.buttonTaskC.Click += new System.EventHandler(this.buttonTaskC_Click);
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(344, 308);
+            this.buttonDelete.Location = new System.Drawing.Point(374, 308);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(114, 51);
             this.buttonDelete.TabIndex = 15;
@@ -207,7 +208,7 @@ namespace GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 371);
+            this.ClientSize = new System.Drawing.Size(500, 371);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.answerClable);

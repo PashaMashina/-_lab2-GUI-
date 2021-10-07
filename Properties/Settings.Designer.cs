@@ -46,5 +46,65 @@ namespace GUI.Properties {
                 this["answer"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double deposit {
+            get {
+                return ((double)(this["deposit"]));
+            }
+            set {
+                this["deposit"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double B {
+            get {
+                return ((double)(this["B"]));
+            }
+            set {
+                this["B"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double C {
+            get {
+                return ((double)(this["C"]));
+            }
+            set {
+                this["C"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("___________________________________________________________________")]
+        public string answerC {
+            get {
+                return ((string)(this["answerC"]));
+            }
+            set {
+                this["answerC"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("___________________________________________________________________")]
+        public string answerB {
+            get {
+                return ((string)(this["answerB"]));
+            }
+            set {
+                this["answerB"] = value;
+            }
+        }
     }
 }

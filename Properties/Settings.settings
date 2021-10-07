@@ -8,5 +8,20 @@
     <Setting Name="answer" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="deposit" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="B" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="C" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="answerC" Type="System.String" Scope="User">
+      <Value Profile="(Default)">___________________________________________________________________</Value>
+    </Setting>
+    <Setting Name="answerB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">___________________________________________________________________</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

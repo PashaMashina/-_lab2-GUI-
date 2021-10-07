@@ -17,6 +17,11 @@ namespace GUI
         public Task2()
         {
             InitializeComponent();
+            depositBox.Text = Properties.Settings.Default.deposit.ToString();
+            inputBBox.Text = Properties.Settings.Default.B.ToString();
+            inputCBox.Text = Properties.Settings.Default.C.ToString();
+            answerClable.Text = Properties.Settings.Default.answerC;
+            answerBlable.Text = Properties.Settings.Default.answerB;
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -61,28 +66,45 @@ namespace GUI
             double B;
             try
             {
-                deposit = double.Parse(this.depositBox.Text);
+                deposit = double.Parse(this.depositBox.Text);   
             }
             catch (FormatException)
             {
-                MessageBox.Show("Некорректный ввод", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Некорректный ввод депозита", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            if (deposit < 0)
+            {
+                MessageBox.Show("Введёный депозит меньше 0", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Properties.Settings.Default.deposit = deposit;
             try
             {
                 B = double.Parse(this.inputBBox.Text);
             }
             catch (FormatException)
             {
-                MessageBox.Show("Некорректный ввод", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Некорректный ввод B", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            if (B < 0)
+            {
+                MessageBox.Show("Введёный B меньше 0", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Properties.Settings.Default.B = B;
 
             var resultMonth = Logic2.Task1(deposit, B);
             var resultYear = Logic2.Year((Logic2.NumberOfMonth(deposit, B, 0)), 3);
             string answerB = "За "+ resultMonth + " " + resultYear + " года величина ежемесячного увеличения вклада превысит " + B + " руб.";
 
             answerBlable.Text = answerB;
+
+            Properties.Settings.Default.answerB = answerB;
+            Properties.Settings.Default.Save();
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -93,6 +115,52 @@ namespace GUI
         private void answerClable_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonTaskC_Click(object sender, EventArgs e)
+        {
+            double deposit;
+            double C;
+            try
+            {
+                deposit = double.Parse(this.depositBox.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Некорректный ввод депозита", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (deposit < 0)
+            {
+                MessageBox.Show("Введёный депозит меньше 0", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Properties.Settings.Default.deposit = deposit;
+            try
+            {
+                C = double.Parse(this.inputCBox.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Некорректный ввод C", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (C < 0)
+            {
+                MessageBox.Show("Введёный C меньше 0", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Properties.Settings.Default.C = C;
+
+            var resultDeposit = Logic2.Task2(deposit, C);
+            string answerC = "Через " + resultDeposit + " месяцев размер вклада превысит " + C + " руб";
+
+            answerClable.Text = answerC;
+
+            Properties.Settings.Default.answerC = answerC;
+            //Properties.Settings.Default.Save();
         }
     }
     public class Months
@@ -151,7 +219,7 @@ namespace GUI
                 }
                 amonth--;
             }
-            return thisMonth;
+            return thisMonth+1;
         }
         public static string Task1(double deposit, double B)
         {
