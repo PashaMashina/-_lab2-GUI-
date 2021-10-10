@@ -74,7 +74,7 @@ namespace GUI
                 return;
             }
 
-            if (deposit < 0)
+            if (deposit <= 0)
             {
                 MessageBox.Show("Введёный депозит меньше 0", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -90,7 +90,7 @@ namespace GUI
                 return;
             }
 
-            if (B < 0)
+            if (B <= 0)
             {
                 MessageBox.Show("Введёный B меньше 0", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -131,7 +131,7 @@ namespace GUI
                 return;
             }
 
-            if (deposit < 0)
+            if (deposit <= 0)
             {
                 MessageBox.Show("Введёный депозит меньше 0", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -147,7 +147,7 @@ namespace GUI
                 return;
             }
 
-            if (C < 0)
+            if (C <= 0)
             {
                 MessageBox.Show("Введёный C меньше 0", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -196,7 +196,7 @@ namespace GUI
         public static int Year(int amonth, int thisMonth)
         {
             int thisYear = 2021;
-            for (int i = 1; amonth >= 0; i++)
+            for (int i = 1; amonth > 0; i++)
             {
                 thisMonth++;
                 if (thisMonth == 13)
@@ -210,6 +210,7 @@ namespace GUI
         }
         public static int ThisNumberMonth(int amonth, int thisMonth)
         {
+            thisMonth++;
             for (int i = 1; amonth >= 0; i++)
             {
                 thisMonth++;
@@ -219,7 +220,7 @@ namespace GUI
                 }
                 amonth--;
             }
-            return thisMonth+1;
+            return thisMonth;
         }
         public static string Task1(double deposit, double B)
         {
@@ -266,6 +267,9 @@ namespace GUI
                     strThisMonth = Months.month11;
                     break;
                 case 12:
+                    strThisMonth = Months.month12;
+                    break;
+                case 13:
                     strThisMonth = Months.month12;
                     break;
             }
