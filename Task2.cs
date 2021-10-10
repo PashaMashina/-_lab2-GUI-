@@ -13,6 +13,14 @@ namespace GUI
 {
     public partial class Task2 : Form
     {
+        private void tb_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{Tab}");
+            }
+        }
+
         Thread th;
         public Task2()
         {
@@ -22,8 +30,15 @@ namespace GUI
             inputCBox.Text = Properties.Settings.Default.C.ToString();
             answerClable.Text = Properties.Settings.Default.answerC;
             answerBlable.Text = Properties.Settings.Default.answerB;
-        }
 
+            depositBox.KeyUp += tb_KeyUp;
+            inputBBox.KeyUp += tb_KeyUp;
+            inputCBox.KeyUp += tb_KeyUp;
+        }
+        private void depositBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
         private void back_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -34,21 +49,6 @@ namespace GUI
         public void open(object obj)
         {
             Application.Run(new Menu());
-        }
-
-        private void Task2_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -105,16 +105,6 @@ namespace GUI
 
             Properties.Settings.Default.answerB = answerB;
             Properties.Settings.Default.Save();
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void answerClable_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonTaskC_Click(object sender, EventArgs e)

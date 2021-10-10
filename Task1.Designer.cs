@@ -44,7 +44,7 @@ namespace GUI
             this.back.Location = new System.Drawing.Point(12, 107);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(114, 51);
-            this.back.TabIndex = 0;
+            this.back.TabIndex = 4;
             this.back.Text = "Назад";
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.back_Click);
@@ -59,15 +59,13 @@ namespace GUI
             this.label1.Text = "Дано натуральное число 1 ≤ n ≤ 9999, определяющее стоимость товара в копейках. \r\n" +
     "Выразить стоимость в рублях и копейках, например, 3 рубля 21 копейка, 15 рублей " +
     "5 копеек, 1 рубль ровно и т. п.";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // amountCost
             // 
             this.amountCost.Location = new System.Drawing.Point(360, 52);
             this.amountCost.Name = "amountCost";
             this.amountCost.Size = new System.Drawing.Size(146, 23);
-            this.amountCost.TabIndex = 2;
-            this.amountCost.TextChanged += new System.EventHandler(this.amountCost_TextChanged);
+            this.amountCost.TabIndex = 1;
             // 
             // label2
             // 
@@ -83,7 +81,7 @@ namespace GUI
             this.buttonOfTask1.Location = new System.Drawing.Point(276, 121);
             this.buttonOfTask1.Name = "buttonOfTask1";
             this.buttonOfTask1.Size = new System.Drawing.Size(114, 37);
-            this.buttonOfTask1.TabIndex = 4;
+            this.buttonOfTask1.TabIndex = 3;
             this.buttonOfTask1.Text = "Выполнить";
             this.buttonOfTask1.UseVisualStyleBackColor = true;
             this.buttonOfTask1.Click += new System.EventHandler(this.buttonOfTask1_Click);
@@ -103,7 +101,7 @@ namespace GUI
             this.answerBox.Location = new System.Drawing.Point(360, 81);
             this.answerBox.Name = "answerBox";
             this.answerBox.Size = new System.Drawing.Size(146, 23);
-            this.answerBox.TabIndex = 6;
+            this.answerBox.TabIndex = 2;
             // 
             // label3
             // 
@@ -129,7 +127,6 @@ namespace GUI
             this.Controls.Add(this.back);
             this.Name = "Task1";
             this.Text = "Задание 2";
-            this.Load += new System.EventHandler(this.Task1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
